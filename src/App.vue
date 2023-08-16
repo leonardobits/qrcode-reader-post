@@ -43,9 +43,16 @@ export default {
     }
   },
   methods: {
-    showAlert(text) {
-      // Código do swal...
-    },
+showAlert(text) {
+    this.$swal({
+        title: text,
+        toast: true,
+        position: 'bottom-end',
+        showConfirmButton: false,
+        timer: 3000,
+        icon: "success",
+    });
+},
     onDecode(result) {
       this.showAlert(result);
       this.count += 1;
